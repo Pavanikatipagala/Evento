@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2dede;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .header {
+            background-color: #966293;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 20px;
+        }
+
+        .header img {
+            height: 50px;
+        }
+
+        .tagline {
+            font-size: 18px;
+            color: #fff;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        .sidebar {
+            background-color: #966293;
+            color: white;
+            width: 200px;
+            height: 100vh;
+            padding-top: 20px;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .sidebar a:hover {
+            background-color: #4CAF50;
+        }
+
+        .main {
+            margin-left: 220px;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .profile-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .profile-container h1 {
+            margin-bottom: 20px;
+        }
+
+        .profile-container input {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 80%;
+            max-width: 300px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .content img {
+            width: 60%;
+            border-radius: 10px;
+        }
+
+        .services {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+        }
+
+        .services ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .services li {
+            text-align: left;
+            margin: 10px 0;
+        }
+
+        .bookings, .transactions {
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .bookings table, .transactions table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .bookings th, .transactions th, .bookings td, .transactions td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .bookings th, .transactions th {
+            background-color: #f2f2f2;
+        }
+
+        .make-payment {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .logout {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="home.html">Home</a>
+        <a href="works.html">Works</a>
+        <a href="services.html">Services</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="contactus.html">Contact Us</a>
+    </div>
+    <div class="main">
+        <div class="header">
+            <div style="display: flex; align-items: center;">
+                <img src="logo.png" alt="EVENTO Logo">
+                <span class="tagline">We create, you celebrate</span>
+            </div>
+        </div>
+        <div class="profile-container">
+            <h1>My Profile</h1>
+            <input type="text" value="Pavani" readonly>
+            <input type="email" value="pavani@gmail.com" readonly>
+        </div>
+
+        <div class="bookings">
+            <h2>Your Bookings</h2>
+            <table>
+                <tr>
+                    <th>S.no</th>
+                    <th>Event</th>
+                    <th>Total Amount</th>
+                    <th>Paid</th>
+                    <th>Due Amount</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Wedding</td>
+                    <td>500000</td>
+                    <td>300000</td>
+                    <td>200000</td>
+                    <td><button class="make-payment" onclick="makePayment()">Make Payment</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="transactions">
+            <h2>Transactions</h2>
+            <table>
+                <tr>
+                    <th>Transaction ID</th>
+                    <th>Amount Paid</th>
+                    <th>Receipt</th>
+                </tr>
+                <tr>
+                    <td>TIdl0254885565</td>
+                    <td>200000</td>
+                    <td><img src="/pictures/document-icon-template-black-color-editable-document-icon-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg" alt="Receipt Icon" style="width: 30px; height: 30px;"></td>
+                </tr>
+            </table>
+        </div>
+
+        <button class="logout" onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+        function makePayment() {
+            alert("Payment link sent to your e-mail");
+        }
+
+        function logout() {
+            alert("You have been logged out.");
+            window.location.href="home.html"; 
+        }
+    </script>
+</body>
+</html>

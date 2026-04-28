@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento - Our Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0e6ef;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #966293;
+            color: #fff;
+            padding: 20px 40px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo img {
+          
+            height: 50px;
+        }
+        .tagline {
+            font-family: 'Arial', serif;
+            font-size: 20px;
+            font-style: italic;
+            color: #f7f7f7;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px;
+            font-size: 16px;
+            position: relative;
+        }
+        nav a:not(:first-child)::before {
+            content: "|";
+            color: #e6dcdc;
+            margin-right: 10px;
+        }
+        nav a:hover {
+            color: #d1b1c7;
+        }
+        .services {
+            text-align: center;
+            padding: 20px;
+        }
+        .services h1 {
+            color: #4b4b4b;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .services-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .service-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            text-align: left;
+        }
+        .service-item img {
+            width: 100%;
+            height: auto;
+        }
+        .service-item h2 {
+            font-size: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Evento Logo">
+            <span class="tagline">We Create, You Celebrate</span>
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="works.html">Works</a>
+            <a href="services.html">Services</a>
+            <a href="aboutUs.html">About Us</a>
+            <a href="contactus.html">Contact Us</a>
+        </nav>
+    </div>
+    <div class="services">
+        <h1>Our Services</h1>
+        <div class="services-grid">
+            <div class="service-item">
+                <img src="/pictures/8.jpg" alt="Full service production">
+                <h2>Full service production</h2>
+            </div>
+            <div class="service-item">
+                <img src="/pictures/9.jpg" alt="Event Management">
+                <h2>Event Management</h2>
+            </div>
+            <div class="service-item">
+                <img src="/pictures/10.jpg" alt="Food & Beverages">
+                <h2>Food & Beverages</h2>
+            </div>
+            <div class="service-item">
+                <img src="/pictures/11.jpg" alt="Live Entertainment">
+                <h2>Live Entertainment</h2>
+            </div>
+            <div class="service-item">
+                <img src="pictures/12.jpg" alt="Destination Events">
+                <h2>Destination Events</h2>
+            </div>
+            <div class="service-item">
+                <img src="pictures/13.jpg" alt="Picnics">
+                <h2>Picnics</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
